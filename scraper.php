@@ -4,10 +4,9 @@
 //  https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup=6299999
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-for($page = 0; $page <2; $page++)
+for($page = 1; $page <5; $page++)
 {
-    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
-    echo "$link\n";
+    echo $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
 }
 //
 // // Read in a page
