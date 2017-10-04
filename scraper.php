@@ -1,9 +1,14 @@
 <?
 // This is a template for a PHP scraper on morph.io (https://morph.io)
 // including some code snippets below that you should find helpful
-//https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup=2899999
-// require 'scraperwiki.php';
-// require 'scraperwiki/simple_html_dom.php';
+//  https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup=6299999
+require 'scraperwiki.php';
+require 'scraperwiki/simple_html_dom.php';
+forloop($page = 0; $page >2; $page++)
+{
+    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
+    echo "$link\n";
+}
 //
 // // Read in a page
 // $html = scraperwiki::scrape("http://foo.com");
