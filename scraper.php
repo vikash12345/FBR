@@ -6,7 +6,9 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 for($page = 1; $page <5; $page++)
 {
-    echo $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
+    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
+    $NEWLINK    =   file_get_html($link);
+    echo $NEWLINK;
 }
 //
 // // Read in a page
