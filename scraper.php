@@ -6,7 +6,7 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 for($page = 1; $page <3; $page++)
 {
-    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
+ //   $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
      $cHeadres = array(
       'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Language: en-US,en;q=0.5',
@@ -14,7 +14,7 @@ for($page = 1; $page <3; $page++)
       'Pragma: no-cache',
       'Cache-Control: no-cache'
      );
- $MyWebsite = 'http://www.peshawarhighcourt.gov.pk/PHCCMS/reportedJudgments.php?action=search';
+ $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
  function dlPage($href) {
   global $cHeadres;
   $ch = curl_init();
