@@ -19,7 +19,7 @@ for($page = 1; $page <3; $page++)
   global $cHeadres;
   $ch = curl_init();
   if($ch){
-   curl_setopt($ch, CURLOPT_URL, $href);
+   curl_setopt($ch, CURLOPT_URL, $link);
    curl_setopt($ch, CURLOPT_HTTPHEADER, $cHeadres);
    curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
