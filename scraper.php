@@ -42,7 +42,7 @@ for($page = 1; $page <3; $page++)
  
  if($ntn != null || $ntn != "")
  {
- echo  $ntn;
+ echo  "This is NTN number => $ntn \n";
  }
     
     
