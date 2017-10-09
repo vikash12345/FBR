@@ -4,18 +4,14 @@
 //  https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup=6299999
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
-for($page = 1; $page <3; $page++)
-{
- //   $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
-     $cHeadres = array(
+ $cHeadres = array(
       'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Language: en-US,en;q=0.5',
       'Connection: Keep-Alive',
       'Pragma: no-cache',
       'Cache-Control: no-cache'
      );
- $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
- function dlPage($href) {
+function dlPage($href) {
   global $cHeadres;
   $ch = curl_init();
   if($ch){
@@ -36,7 +32,12 @@ for($page = 1; $page <3; $page++)
    return $dom;
   }
  }
-$maincode = dlPage($link);
+
+for($page = 1; $page <3; $page++)
+{
+    
+ $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
+ $maincode = dlPage($link);
  if($maincode)
  {
  echo $maincode;
