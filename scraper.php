@@ -36,7 +36,11 @@ for($page = 1; $page <3; $page++)
    return $dom;
   }
  }
-echo $maincode = dlPage($link);
+$maincode = dlPage($link);
+ if($maincode)
+ {
+ echo $maincode;
+ }
     
     
     
