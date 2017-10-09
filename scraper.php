@@ -36,14 +36,10 @@ function dlPage($href) {
    return $dom;
   }
  }
- $maincode = dlPage($link);
- 
- if($maincode)
- {
-   $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
-
+ $maincode = dlPage($link); 
+$ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
  echo  "This is NTN number => $ntn \n";
- }
+
     
     
     
