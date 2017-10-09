@@ -15,7 +15,7 @@ for($page = 1; $page <3; $page++)
       'Pragma: no-cache',
       'Cache-Control: no-cache'
      );
-function dlPage($href) {
+    function dlPage($link) {
   global $cHeadres;
   $ch = curl_init();
   if($ch){
