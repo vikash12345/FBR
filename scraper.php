@@ -6,7 +6,7 @@ require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
 for($page = 1; $page <5; $page++)
 {
-    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup='.$page;
+    $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
     $NEWLINK    =   file_get_html($link);
     echo $NEWLINK;
 }
