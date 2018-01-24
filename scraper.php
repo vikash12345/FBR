@@ -60,13 +60,7 @@ for($page = 0; $page <4; $page++)
 				
            scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
 				
-				}}}
-	}}
-	
-	}	
-			
-?>
-
+				
       
       
  }
