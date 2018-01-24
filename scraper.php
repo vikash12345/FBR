@@ -47,7 +47,8 @@ for($page = 0; $page <4; $page++)
       $street_lane      = $maincode->find("//*[@id='lblAddress2']",0)->plaintext;
       $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
       $city             = $maincode->find("//*[@id='lblAddress4']",0)->plaintext;
-      
+      if($ntn != "" || $ntn != null)
+      {
       $record = array( 'ntn' =>$ntn, 
 		   'name' => $name,
 		   'cnic_reg' => $cnic_reg, 
@@ -59,7 +60,7 @@ for($page = 0; $page <4; $page++)
 		   );
 				
            scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
-				
+      }		
 				
       
       
