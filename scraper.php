@@ -34,20 +34,13 @@ $cHeadres = array(
          return $dom;
         }
        }
-       //$maincode = dlPage($link);
+//Main Code Start Here.
 for($page = 0; $page <4; $page++)
-{
-
-$maincode = dlPage('https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page);
-sleep(3);
-
+ {
+      $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
+      $maincode = dlPage($link);
+      sleep(2);
       $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
-      echo  "$ntn\n";
- 
-    
-    
-    
-   // $NEWLINK    =   file_get_html($link);
-   // echo $NEWLINK;
-}
+      echo  "$ntn = > $link \n";
+ }
 ?>
