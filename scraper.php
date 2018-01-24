@@ -35,7 +35,9 @@ $cHeadres = array(
         }
        }
 //Main Code Start Here.
-for($page = 0; $page <10; $page++)
+
+//Total Pages in that site is 4995153
+for($page = 0; $page <4995153; $page++)
  {
       $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
       $maincode = dlPage($link);
