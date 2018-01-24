@@ -44,7 +44,7 @@ for($page = 1; $page <3; $page++)
 if($maincode)
 {
       $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
-      echo  "This is NTN number => $ntn \n";
+      echo  "$ntn \n";
 }
     
     
