@@ -35,7 +35,7 @@ $cHeadres = array(
         }
        }
        //$maincode = dlPage($link);
-for($page = 1; $page <4; $page++)
+for($page = 0; $page <4; $page++)
 {
 
 $maincode = dlPage('https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page);
