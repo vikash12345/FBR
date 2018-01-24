@@ -37,16 +37,13 @@ $cHeadres = array(
        //$maincode = dlPage($link);
 for($page = 1; $page <3; $page++)
 {
-    
- $link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
- $maincode = file_get_html($link);
- sleep(3);
-if($maincode)
-{
+$link = 'https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
+$maincode = dlPage($link);
+sleep(3);
+
       $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
       echo  "$ntn \n";
-}
-    
+ 
     
     
     
