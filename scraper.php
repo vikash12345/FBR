@@ -49,7 +49,7 @@ for($page = 0; $page <4995153; $page++)
       $street_lane      = $maincode->find("//*[@id='lblAddress2']",0)->plaintext;
       $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
       $city             = $maincode->find("//*[@id='lblCity']",0)->plaintext;
-      
+      echo "$link\n";
       $record = array( 'ntn' =>$ntn, 
 		   'name' => $name,
 		   'cnic_reg' => $cnic_reg, 
