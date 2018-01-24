@@ -46,7 +46,7 @@ for($page = 0; $page <10; $page++)
       $house_flat       = $maincode->find("//*[@id='lblAddress1']",0)->plaintext;
       $street_lane      = $maincode->find("//*[@id='lblAddress2']",0)->plaintext;
       $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
-      $city             = $maincode->find("//*[@id='lblAddress4']",0)->plaintext;
+      $city             = $maincode->find("//*[@id='lblCity']",0)->plaintext;
       
       $record = array( 'ntn' =>$ntn, 
 		   'name' => $name,
