@@ -39,8 +39,35 @@ for($page = 0; $page <4; $page++)
  {
       $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
       $maincode = dlPage($link);
-      sleep(2);
-      $ntn = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
-      echo  "$ntn = > $link \n";
+      sleep(1);
+      $ntn              = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
+      $name             = $maincode->find("//*[@id='lblSRName']",0)->plaintext;
+      $cnic_reg         = $maincode->find("//*[@id='lblCNICRegIncPP']",0)->plaintext;
+      $house_flat       = $maincode->find("//*[@id='lblAddress1']",0)->plaintext;
+      $street_lane      = $maincode->find("//*[@id='lblAddress2']",0)->plaintext;
+      $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
+      $city             = $maincode->find("//*[@id='lblAddress4']",0)->plaintext;
+      
+      $record = array( 'ntn' =>$ntn, 
+		   'name' => $name,
+		   'cnic_reg' => $cnic_reg, 
+		   'house_flat' => $house_flat, 
+		   'street_lane' => $street_lane, 
+		   'sec_block_road' => $sec_block_road, 
+		   'city' => $city, 
+		   'link' =>  $link
+		   );
+				
+           scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
+				
+				}}}
+	}}
+	
+	}	
+			
+?>
+
+      
+      
  }
 ?>
