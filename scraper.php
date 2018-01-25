@@ -50,14 +50,14 @@ for($page = 813; $page <4995153; $page++)
       $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
       $city             = $maincode->find("//*[@id='lblCity']",0)->plaintext;
       echo "$link\n";
-      $record = array( 'ntn' =>$ntn, 
-		   'name' => $name,
-		   'cnic_reg' => $cnic_reg, 
-		   'house_flat' => $house_flat, 
-		   'street_lane' => $street_lane, 
-		   'sec_block_road' => $sec_block_road, 
-		   'city' => $city, 
-		   'link' =>  $link
+      $record = array( 'ntn' =>trim($ntn), 
+		   'name' => trim($name),
+		   'cnic_reg' => trim($cnic_reg), 
+		   'house_flat' => trim($house_flat), 
+		   'street_lane' => trim($street_lane), 
+		   'sec_block_road' => trim($sec_block_road), 
+		   'city' => trim($city), 
+		   'link' =>  trim($link)
 		   );
 				
            scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
