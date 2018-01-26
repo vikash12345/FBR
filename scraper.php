@@ -67,7 +67,8 @@ for($page = 0;$page <816; $page++)
 		   );
 				
            scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
-     	unset($ntn);
+     	unset($maincode);
+	unset($ntn);
 	unset($name);
 	unset($cnic_reg);
 	unset($house_flat);
