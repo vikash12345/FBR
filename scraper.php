@@ -39,14 +39,7 @@ $cHeadres = array(
 //Total Pages in that site is 4995153
 for($page = 0;$page <816; $page++)
  {
-	unset($ntn);
-	unset($name);
-	unset($cnic_reg);
-	unset($house_flat);
-	unset($street_lane);
-	unset($sec_block_road);
-	unset($city);
-	unset($link);
+	
 	
       $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
       $maincode = dlPage($link);
@@ -74,7 +67,14 @@ for($page = 0;$page <816; $page++)
 		   );
 				
            scraperwiki::save(array('ntn','name','cnic_reg','house_flat','street_lane','sec_block_road','city','link'), $record);
-     	
+     	unset($ntn);
+	unset($name);
+	unset($cnic_reg);
+	unset($house_flat);
+	unset($street_lane);
+	unset($sec_block_road);
+	unset($city);
+	unset($link);
 				
       
       
