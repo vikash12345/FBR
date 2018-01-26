@@ -39,6 +39,15 @@ $cHeadres = array(
 //Total Pages in that site is 4995153
 for($page = 816; $page <4995153; $page++)
  {
+	unset($ntn);
+	unset($name);
+	unset($cnic_reg);
+	unset($house_flat);
+	unset($street_lane);
+	unset($sec_block_road);
+	unset($city);
+	unset($link);
+	
       $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
       $maincode = dlPage($link);
       sleep(1);
@@ -50,6 +59,10 @@ for($page = 816; $page <4995153; $page++)
       $sec_block_road   = $maincode->find("//*[@id='lblAddress3']",0)->plaintext;
       $city             = $maincode->find("//*[@id='lblCity']",0)->plaintext;
       echo "$link\n";
+	
+	
+	
+	
       $record = array( 'ntn' =>trim($ntn), 
 		   'name' => trim($name),
 		   'cnic_reg' => trim($cnic_reg), 
