@@ -37,7 +37,7 @@ $cHeadres = array(
 //Main Code Start Here.
 
 //Total Pages in that site is 4995153
-for($page = 816; $page <4995153; $page++)
+for($page = 0;$page <816; $page++)
  {
 	unset($ntn);
 	unset($name);
