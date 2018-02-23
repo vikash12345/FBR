@@ -44,7 +44,9 @@ for($page = 0;$page <1199000; $page++)
 	
       $link ='https://e.fbr.gov.pk/Registration/searchDetail.aspx?crup='.$page;
       $maincode = dlPage($link);
-      sleep(1);
+	if($maincode)
+	{
+      sleep(4);
       $ntn              = $maincode->find("//*[@id='lblSRNTN']",0)->plaintext;
       $name             = $maincode->find("//*[@id='lblSRName']",0)->plaintext;
       $cnic_reg         = $maincode->find("//*[@id='lblCNICRegIncPP']",0)->plaintext;
@@ -78,7 +80,7 @@ for($page = 0;$page <1199000; $page++)
 	unset($city);
 	unset($link);
 				
-      
+	}
       
  }
 ?>
