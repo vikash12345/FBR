@@ -4,6 +4,7 @@
 //  https://e.fbr.gov.pk/Registration/searchDetail.aspx?rand=0.6987121410114072&crup=6299999
 require 'scraperwiki.php';
 require 'scraperwiki/simple_html_dom.php';
+ini_set('memory_limit', '-1');
 $cHeadres = array(
       'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
       'Accept-Language: en-US,en;q=0.5',
